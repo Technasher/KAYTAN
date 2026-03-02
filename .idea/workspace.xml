@@ -4,44 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="066ef147-18e7-46bf-a6ce-e76cb2567398" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/KAYTAN.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/models/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/models/program.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/models/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/repositories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/repositories/program_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB/repositories/user_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/filters/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/filters/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/handlers/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/handlers/program.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/handlers/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/keyboards/AdminKeyboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/keyboards/DeactivateProgramInline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/keyboards/InlineProgramList.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/keyboards/UserStartReplyKeyboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/keyboards/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/middlewares/DB.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/middlewares/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/states/ProgramFSM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/states/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="066ef147-18e7-46bf-a6ce-e76cb2567398" name="Changes" comment="First commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <branch-grouping />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -121,6 +85,42 @@
       <option name="presentableId" value="Default" />
       <updated>1772061736867</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <option name="closed" value="true" />
+      <created>1772423243838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1772423243838</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
   </component>
 </project>
