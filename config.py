@@ -1,7 +1,7 @@
 from dotenv import dotenv_values
-from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import PostgresDsn, field_validator
-from typing import Optional
+# from pydantic_settings import BaseSettings, SettingsConfigDict
+# from pydantic import PostgresDsn, field_validator
+# from typing import Optional
 
 CONFIG = dotenv_values()
 

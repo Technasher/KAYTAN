@@ -1,14 +1,16 @@
+from typing import Optional
+
 from .base import Base
 from sqlalchemy.orm import Mapped, mapped_column
 
 
-class User(Base):
-    __tablename__ = 'user'
+class TelegramUser(Base):
+    __tablename__ = 'telegram_user'
 
     telegram_id: Mapped[int] = mapped_column(unique=True, index=True)
-    username: Mapped[str]
-    first_name: Mapped[str] = mapped_column(nullable=True)
-    last_name: Mapped[str] = mapped_column(nullable=True)
+    username: Mapped[Optional[str]]
+    first_name: Mapped[Optional[str]]
+    last_name: Mapped[Optional[str]]
     # phone_number: Mapped[str] = mapped_column(nullable=True)
 
     is_superuser: Mapped[bool] = mapped_column(default=False)

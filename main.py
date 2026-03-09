@@ -17,8 +17,6 @@ logger = logging.getLogger(__name__)
 
 
 async def main():
-    # TODO: Env
-
     await init_db()
     # Инициализация бота и диспетчера
     bot = Bot(
