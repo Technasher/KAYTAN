@@ -1,4 +1,4 @@
 /.env
 /.venv/
-/database.db
 /.idea/
+/database.db
