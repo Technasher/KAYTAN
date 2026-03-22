@@ -1,11 +1,11 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-def get_sender_keyboard(message_id):
+def get_sender_keyboard(program_id):
     return InlineKeyboardMarkup(
         inline_keyboard=[
             [
-                get_sender_button(message_id)
+                get_sender_button(program_id)
             ]
         ]
     )

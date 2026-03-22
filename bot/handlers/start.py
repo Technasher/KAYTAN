@@ -15,6 +15,7 @@ async def start(message: types.Message, session: AsyncSession):
     user_repo = UserRepository(session)
     program_repo = ProgramRepository(session)
     programs = await program_repo.get_active_list()
+    keyboard = await get_inline_active_program_list(programs)
     # Проверяем, есть ли пользователь в БД
     user = await user_repo.get_by_telegram_id(message.from_user.id)
 
@@ -34,7 +35,6 @@ async def start(message: types.Message, session: AsyncSession):
             f"С возвращением, {message.from_user.first_name}!"
         )
 
-    keyboard = await get_inline_active_program_list(programs)
     await message.answer(
         'TODO: Сообщение со списком активных программ',
         reply_markup=keyboard

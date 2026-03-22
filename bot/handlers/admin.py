@@ -39,7 +39,7 @@ async def create_program(
         )
     await message.answer(
         'Программа успешно создана!',
-        reply_markup=get_sender_keyboard(message.message_id)
+        reply_markup=get_sender_keyboard(program_id)
     )
     await state.clear()
 
