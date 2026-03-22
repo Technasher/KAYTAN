@@ -1,3 +1,5 @@
+from typing import List
+
 from sqlalchemy import select
 from DB.models.tg_user import TelegramUser
 from DB.repositories.base_repository import BaseRepository
@@ -10,6 +12,12 @@ class UserRepository(BaseRepository):
         await self.session.commit()
         await self.session.refresh(user)
         return user
+
+    @property
+    async def user_list(self):
+        stmt = select(TelegramUser)
+        result = await self.session.execute(stmt)
+        return result.scalars()
 
     async def get_by_telegram_id(self, telegram_id: int) -> TelegramUser | None:
         stmt = select(TelegramUser).filter_by(telegram_id=telegram_id)

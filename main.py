@@ -7,7 +7,7 @@ from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from DB.database import session, init_db
-from bot.handlers import start, admin, program
+from bot.handlers import start, admin, program, sender
 from bot.middlewares.DB import DbSessionMiddleware
 from config import CONFIG
 
@@ -21,7 +21,8 @@ async def main():
     # Инициализация бота и диспетчера
     bot = Bot(
         token=CONFIG['BOT_TOKEN'],
-        default=DefaultBotProperties(parse_mode=ParseMode.HTML)
+        default=DefaultBotProperties(parse_mode=ParseMode.HTML),
+
     )
     dp = Dispatcher(storage=MemoryStorage())
 
@@ -32,6 +33,7 @@ async def main():
     dp.include_router(start.router)
     dp.include_router(admin.router)
     dp.include_router(program.router)
+    dp.include_router(sender.router)
 
     # Запуск
     try:

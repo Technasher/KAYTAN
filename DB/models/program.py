@@ -15,5 +15,3 @@ class Program(Base):
     is_active: Mapped[bool] = mapped_column(default=True)
 
     telegram_media: Mapped[List['TelegramMedia']] = relationship(secondary='program_telegram_media', back_populates='program')
-
-    # telegram_media_associations: Mapped[List['ProgramTelegramMedia']] = relationship(back_populates='program')

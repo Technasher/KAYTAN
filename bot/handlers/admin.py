@@ -12,6 +12,7 @@ from DB.repositories.telegram_media_repository import TelegramMediaRepository
 from bot.filters.admin import MessageAdminFilter, CallbackAdminFilter
 from bot.keyboards.AdminKeyboard import admin_keyboard, cancel_add_program_keyboard
 from bot.keyboards.InlineProgramList import get_inline_active_program_list
+from bot.keyboards.SenderKeyboard import get_sender_button, get_sender_keyboard
 from bot.media_goup_manager import MediaGroupManager
 from bot.states.ProgramFSM import ProgramState
 
@@ -36,7 +37,10 @@ async def create_program(
             program_id=program_id,
             telegram_media_id=media_id
         )
-    await message.answer('Программа успешно создана!')
+    await message.answer(
+        'Программа успешно создана!',
+        reply_markup=get_sender_keyboard(message.message_id)
+    )
     await state.clear()
 
 

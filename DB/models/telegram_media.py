@@ -28,4 +28,3 @@ class TelegramMedia(Base):
 
     program: Mapped[List['Program']] = relationship(secondary='program_telegram_media', back_populates='telegram_media')
 
-    # program_associations: Mapped[List['ProgramTelegramMedia']] = relationship(back_populates='telegram_media')

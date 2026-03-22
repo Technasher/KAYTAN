@@ -1,14 +1,18 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-async def get_deactivate_kb(program_id) -> InlineKeyboardMarkup:
+def get_deactivate_button(program_id) -> InlineKeyboardButton:
+    return InlineKeyboardButton(
+        text='Деактивировать',
+        callback_data=f'deactivate:{program_id}'
+    )
+
+
+def get_deactivate_keyboard(program_id) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(
         inline_keyboard=[
             [
-                InlineKeyboardButton(
-                    text='Деактивировать',
-                    callback_data=f'deactivate:{program_id}'
-                )
+                get_deactivate_button(program_id)
             ]
         ]
     )

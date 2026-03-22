@@ -5,7 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from DB.repositories.program_repository import ProgramRepository
 from bot.filters.admin import MessageAdminFilter, CallbackAdminFilter
-from bot.keyboards.DeactivateProgramInline import get_deactivate_kb
+from bot.keyboards.DeactivateProgramInline import get_deactivate_keyboard
+from bot.keyboards.ProgramMadagerKeyboard import get_program_manager_keyboard
 
 router = Router()
 router.callback_query.filter(F.data.startswith("program:"))
@@ -18,6 +19,7 @@ async def program_user(callback: CallbackQuery, session: AsyncSession):
     program = await program_repo.get_program_by_id(program_id)
     admin_filter = CallbackAdminFilter()
     is_admin = await admin_filter(callback, session)
+    message_id = callback.message.message_id
     if program.telegram_media:
         media_group = MediaGroupBuilder()
         media_group.add(
@@ -33,6 +35,6 @@ async def program_user(callback: CallbackQuery, session: AsyncSession):
     if is_admin:
         await callback.message.answer(
             'Что хотите сделать с данной программой?',
-            reply_markup=await get_deactivate_kb(program_id) if is_admin else None
+            reply_markup=get_program_manager_keyboard(program_id, message_id)
         )
 
